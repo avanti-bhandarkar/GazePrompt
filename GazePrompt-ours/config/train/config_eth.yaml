@@ -10,7 +10,7 @@ train:
         warmup: 0
 
     save:
-        metapath: "/mntdata/Atishna/GazeTR/models/"
+        metapath: "/mntdata/avanti/GazeTR/models/"
         folder: eth
         model_name: trans6
         step: 1
@@ -24,8 +24,7 @@ train:
 
     pretrain:
         enable: True
-        # path: /mntdata/Atishna/GazeTR-main/ckpt/eth_tawaana/checkpoint/Iter_10_trans6.pt
-        path: /mntdata/tawaana/GazeTR/models/GazeTR-H-ETH.pt
+        path: /mntdata/avanti/GazeTR/models/GazeTR-H-ETH.pt
         device: 0
 
     device: 0
