@@ -1,0 +1,36 @@
+---
+train:
+
+    params:
+        batch_size: 64
+        epoch: 100
+        lr: 0.01
+        decay: 0.001
+        decay_step: 10
+        warmup: 0
+
+    save:
+        metapath: "/mntdata/Atishna/GazeTR/models/"
+        folder: eth
+        model_name: trans6
+        step: 1
+
+    data:
+        image: "/mntdata/xgaze_448/train_processed/Image/train"
+        label: "/mntdata/xgaze_448/train_processed/Label/train/subject0003.label"
+        header: True
+        name: eth
+        isFolder: False
+
+    pretrain:
+        enable: True
+        # path: /mntdata/Atishna/GazeTR-main/ckpt/eth_tawaana/checkpoint/Iter_10_trans6.pt
+        path: /mntdata/tawaana/GazeTR/models/GazeTR-H-ETH.pt
+        device: 0
+
+    device: 0
+
+    reader: reader
+
+# dropout = 0
+# dim_feed = 512
